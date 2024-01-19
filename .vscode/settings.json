@@ -1,0 +1,69 @@
+{
+  // 是否保存自动格式化
+  "editor.formatOnSave": true,
+  // 启动 eslint autofix on save
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.options": {
+    "extensions": [
+      ".js",
+      ".vue",
+      "html"
+    ]
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "vue",
+  ],
+  // 行尾使用 lf
+  "files.eol": "\n",
+  // 文件夹里排除的内容，搜索结果里也会排除
+  "files.exclude": {
+    "node_modules/": true,
+    "dist/": true,
+    "temp/": true
+  },
+  // 部分校验规则
+  "css.lint.emptyRules": "ignore",
+  "less.lint.emptyRules": "ignore",
+  "vetur.validation.style": false,
+  // 常规文件自动格式化规则
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  // Vue文件自动格式化规则
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "preserve",
+      "wrap_line_length": 200,
+      "end_with_newline": false,
+      "semi": false,
+      "singleQuote": true
+    },
+  },
+  // 忽略 vetur 格式化 js
+  "vetur.format.defaultFormatter.js": "none",
+  // 忽略 beautify 格式化 js
+  "beautify.ignore": [
+    "**/*.js",
+    "**/.*.js"
+  ],
+  "npm-scripts.showStartNotification": false
+}
